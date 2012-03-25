@@ -3,7 +3,6 @@
  * User: mschwartz
  * Date: 3/23/12
  * Time: 3:50 PM
- * To change this template use File | Settings | File Templates.
  */
 
 /*global req, res, include */
@@ -18,7 +17,8 @@ var empty = require('phpjs').empty;
 
 var pathInfo = req.path_info || '';
 
-var docBase = '/Users/mschwartz/src/SilkJS'; // '/usr/share/silkjs';
+//var docBase = '/Users/mschwartz/src/SilkJS'; // '/usr/share/silkjs';
+var docBase = '/usr/share/silkjs';
 var srcPath = docBase + '/src/';
 var jsPath = docBase + '/modules/';
 
