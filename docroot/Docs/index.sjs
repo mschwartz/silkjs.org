@@ -92,7 +92,7 @@ function renderIndex(doc) {
     println("<li class=\"nav-header\">Methods Index</li>");
     doc.each(function(o) {
         if (o.tag === 'function') {
-            println('<li>' + o.name + '</li>');
+            println('<li><a href="#'+o.name.replace(/[\.\/]/igm, '-') + '">' + o.name + '</a></li>');
         }
     });
     println('</ul>');
@@ -120,13 +120,17 @@ function renderDoc(doc) {
 //                hr();
                 break;
             case 'function':
+                println('<a name="'+o.name.replace(/[\.\/]/igm, '-')+'"></a>');
                 println('<h2>Function: ' + o.name + '</h2>');
                 println(o.content);
+                println('<p class="pull-right"><a href="#">Back to top</a></p>');
                 hr();
                 break;
             case 'constructor':
+                println('<a name="'+o.name.replace(/[\.\/]/igm, '-')+'"></a>');
                 println('<h2>Constructor: ' + o.name + '</h2>');
                 println(o.content);
+                println('<p class="pull-right"><a href="#">Back to top</a></p>');
                 hr();
                 break;
             case 'constant':
