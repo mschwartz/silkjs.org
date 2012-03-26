@@ -91,7 +91,7 @@ function renderIndex(doc) {
 
     println("<li class=\"nav-header\">Methods Index</li>");
     doc.each(function(o) {
-        if (o.tag === 'function') {
+        if (o.tag === 'function' || o.tag === 'constructor') {
             println('<li><a href="#'+o.name.replace(/[\.\/]/igm, '-') + '">' + o.name + '</a></li>');
         }
     });
@@ -115,6 +115,13 @@ function renderDoc(doc) {
             case 'namespace':
                 println('<header class="hero-unit">');
                 println('<h1>' + o.name + '<small>namespace</small></h1>');
+                println(o.content);
+                println('</header>');
+//                hr();
+                break;
+            case 'class':
+                println('<header class="hero-unit">');
+                println('<h1>' + o.name + '<small>class</small></h1>');
                 println(o.content);
                 println('</header>');
 //                hr();
@@ -157,7 +164,7 @@ if (pathInfo.length) {
             return;
         }
 
-        if (doc[0].tag !== 'module' && doc[0].tag !== 'namespace') {
+        if (doc[0].tag !== 'module' && doc[0].tag !== 'namespace' && doc[0].tag !== 'class') {
             return;
         }
         if (doc[0].name !== pathInfo) {
@@ -174,7 +181,7 @@ if (pathInfo.length) {
             return;
         }
 
-        if (doc[0].tag !== 'module' && doc[0].tag !== 'namespace') {
+        if (doc[0].tag !== 'module' && doc[0].tag !== 'namespace' && doc[0].tag !== 'class') {
             return;
         }
         if (doc[0].name !== pathInfo) {
