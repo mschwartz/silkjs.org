@@ -1,7 +1,7 @@
 !function ($) {
 
     $(function(){
-        // Disable certain links in Docs
+        // Disable certain links in documentation
         $('section [href^=#]').click(function (e) {
             e.preventDefault()
         })
@@ -30,6 +30,6 @@
             }
         }
 
-    })
+    });
 
 }(window.jQuery)

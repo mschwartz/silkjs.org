@@ -33,8 +33,6 @@ print([
     '  '
     ].join('\n'));
 
-//include 'NavBar.coffee'
-
 include('NavBar.sjs');
 
 print('<div class="container">');

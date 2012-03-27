@@ -1,6 +1,6 @@
-res.data.title = 'SilkJS - Installing'
+res.data.title = 'SilkJS - installing-silkjs'
 
-include 'Header.coffee'
+include 'Header.sjs'
 
 code = (s) ->
   "<p>$ <code>#{s}</code></p>"
@@ -201,5 +201,5 @@ cannot be copied over.</em></p>
 """
 
 res.write '</div></div>'
-include 'Footer.coffee'
+include 'Footer.sjs'
 

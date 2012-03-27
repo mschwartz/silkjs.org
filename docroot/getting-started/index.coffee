@@ -1,6 +1,6 @@
 res.data.title = 'SilkJS - Getting Started'
 
-include 'Header.coffee'
+include 'Header.sjs'
 
 code = (s) ->
   "<p>$ <code>#{s}</code></p>"
@@ -375,5 +375,5 @@ see that it's quite possible to implement full-blown ncurses based console UI ap
 """
 
 
-include 'Footer.coffee'
+include 'Footer.sjs'
 

@@ -44,7 +44,7 @@ function renderNav() {
       println('<li class="active"><a href="#top">Documentation</a></li>');
     }
     else {
-      println('<li><a href="/Docs/">Documentation</a><li>');
+      println('<li><a href="/documentation/">Documentation</a><li>');
     }
 
     println('<li class="nav-header">Builtin Modules</li>');
@@ -61,7 +61,7 @@ function renderNav() {
 
         var name = o[0].name || filename.replace(/\.cpp/, '');
         var cls = name === pathInfo ? ' class="active"' : '';
-        println('<li'+cls+'><a href="/Docs/'+name+'">'+name+'</a></li>');
+        println('<li'+cls+'><a href="/documentation/'+name+'">'+name+'</a></li>');
     });
 
     println('<li class="nav-header">JavaScript Modules</li>');
@@ -77,7 +77,7 @@ function renderNav() {
 
         var name = o[0].name || filename.replace(/\.cpp/, '');
         var cls = name === pathInfo ? ' class="active"' : '';
-        println('<li'+cls+'><a href="/Docs/'+name+'">'+name+'</a></li>');
+        println('<li'+cls+'><a href="/documentation/'+name+'">'+name+'</a></li>');
     });
 
     println('</ul>');

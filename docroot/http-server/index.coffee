@@ -1,6 +1,6 @@
 res.data.title = 'SilkJS - HTTP Server'
 
-include 'Header.coffee'
+include 'Header.sjs'
 
 code = (s) ->
   "<p>$ <code>#{s}</code></p>"
@@ -218,6 +218,6 @@ processing (e.g. serving static or dyanmic content from documentRoot).</li>
 
 """
 
-include 'Footer.coffee'
+include 'Footer.sjs'
 
 

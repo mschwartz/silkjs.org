@@ -1,6 +1,6 @@
 res.data.title = 'SilkJS - JavaScript for the rest of us'
 
-include 'Header.coffee'
+include 'Header.sjs'
 
 res.write """
   <header class="hero-unit">
@@ -192,5 +192,5 @@ res.write """
  """
 
 
-include 'Footer.coffee'
+include 'Footer.sjs'
 
