@@ -5,7 +5,7 @@
  * Time: 3:50 PM
  */
 
-/*global req, res, include */
+/*global req, res, include, hr, println */
 
 "use strict";
 
@@ -22,12 +22,37 @@ var docBase = '/usr/share/silkjs';
 var srcPath = docBase + '/src/';
 var jsPath = docBase + '/modules/';
 
+function sort(docs) {
+    var ndocs = [];
+    docs.each(function (o, filename) {
+        if (empty(o) || o[0].tag === 'ignore') {
+            return;
+        }
+        var tag = o[0].tag;
+        if (tag !== 'module' && tag !== 'namespace' && tag !== 'class' && tag !== 'singleton') {
+            o[0].tag = 'undocumented';
+            return;
+        }
+        var name = o[0].name || filename.replace(/\.cpp/, '');
+        ndocs.push({ key: name, value: o });
+    });
+    ndocs.sort(function(a, b) {
+        return a.key.toLowerCase().localeCompare(b.key.toLowerCase());
+    });
+    docs = {};
+    ndocs.each(function(value, key) {
+        docs[value.key] = value.value;
+    });
+    return docs;
+}
+
 var cppDocs = {};
 fs.readDir(srcPath).each(function(fn) {
     if (fn.endsWith('.cpp')) {
         cppDocs[fn] = parse(srcPath + fn);
     }
 });
+cppDocs = sort(cppDocs);
 
 var jsDocs = {};
 fs.readDir(jsPath).each(function(fn) {
@@ -35,6 +60,7 @@ fs.readDir(jsPath).each(function(fn) {
         jsDocs[fn] = parse(jsPath + fn);
     }
 });
+jsDocs = sort(jsDocs);
 
 function renderNav() {
     println('<div class="span2">');
@@ -49,33 +75,13 @@ function renderNav() {
 
     println('<li class="nav-header">Builtin Modules</li>');
     
-    cppDocs.each(function(o, filename) {
-        if (empty(o) || o[0].tag === 'ignore') {
-            return;
-        }
-        var tag = o[0].tag;
-        if (tag !== 'module' && tag !== 'namespace' && tag !== 'class' && tag !== 'singleton') {
-            o[0].tag = 'undocumented';
-            return;
-        }
-
-        var name = o[0].name || filename.replace(/\.cpp/, '');
+    cppDocs.each(function(o, name) {
         var cls = name === pathInfo ? ' class="active"' : '';
         println('<li'+cls+'><a href="/documentation/'+name+'">'+name+'</a></li>');
     });
 
     println('<li class="nav-header">JavaScript Modules</li>');
-    jsDocs.each(function(o, filename) {
-        if (empty(o) || o[0].tag === 'ignore') {
-            return;
-        }
-        var tag = o[0].tag;
-        if (tag !== 'module' && tag !== 'namespace' && tag !== 'class' && tag !== 'singleton') {
-            o[0].tag = 'undocumented';
-            return;
-        }
-
-        var name = o[0].name || filename.replace(/\.cpp/, '');
+    jsDocs.each(function(o, name) {
         var cls = name === pathInfo ? ' class="active"' : '';
         println('<li'+cls+'><a href="/documentation/'+name+'">'+name+'</a></li>');
     });
