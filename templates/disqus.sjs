@@ -1,6 +1,5 @@
 var disqus_identifier = req.uri;
 
-console.dir(global.doHR);
 if (global.doHR === undefined || global.doHR) {
     hr();
 }
