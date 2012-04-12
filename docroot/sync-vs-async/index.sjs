@@ -11,4 +11,5 @@ function code(s) {
 
 res.write(markdown(fs.readFile('templates/sync-vs-async.md')));
 
+include('disqus.sjs');
 include('Footer.sjs');

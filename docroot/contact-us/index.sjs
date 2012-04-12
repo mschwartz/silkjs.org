@@ -18,4 +18,7 @@ println('</ul>');
 println('</div>');
 println('</div>');
 
+println('<div class="page-header"><h1>Feedback</h1></div>');
+global.doHR = false;
+include('disqus.sjs');
 include('Footer.sjs');
