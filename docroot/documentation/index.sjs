@@ -92,7 +92,7 @@ function renderNav() {
 }
 
 function renderIndex(doc) {
-    println('<div class="span2">');
+    println('<div class="span3">');
     println('<div class="well"  style="padding: 8px 0;"><ul class="nav nav-list">');
 
     println("<li class=\"nav-header\">Methods Index</li>");
@@ -160,7 +160,7 @@ println('<div class="row">');
 
 renderNav();
 
-println('<div class="' + (pathInfo.length ? 'span8': 'span10') + '">');
+println('<div class="' + (pathInfo.length ? 'span7': 'span10') + '">');
 //println('<div class="page-header"><h1>Documentation<small>'+pathInfo+'</small></h1></div>');
 
 if (pathInfo.length) {
