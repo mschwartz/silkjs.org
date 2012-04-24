@@ -214,4 +214,5 @@ else {
 
 println('</div><!-- /row -->');
 
+include('disqus.sjs');
 include('Footer.sjs');

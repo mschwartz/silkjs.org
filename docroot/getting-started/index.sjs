@@ -11,4 +11,5 @@ function code(s) {
 
 res.write(markdown(fs.readFile('templates/getting-started.md')));
 
+include('disqus.sjs');
 include('Footer.sjs');

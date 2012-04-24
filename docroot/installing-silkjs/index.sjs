@@ -169,6 +169,7 @@ res.write([
 ].join('\n'));
     
 res.write('</div></div>');
-    
+include('disqus.sjs');
+
 include('Footer.sjs');
 

@@ -24,6 +24,7 @@ println([
         nav('/installing-silkjs/', 'Installing SilkJS'),
         nav('/getting-started/', 'Getting Started'),
         nav('/http-server/', 'HTTP Server'),
+        nav('/sync-vs-async/', 'Sync. vs. Async'),
         nav('/documentation/', 'Documentation'),
         nav('/contact-us/', 'Contact Us'),
 '        </ul>',
