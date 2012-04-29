@@ -53,7 +53,7 @@ res.write([
     '<p>General purpose libraries:</p>',
     code('sudo apt-get install libmm-dev libssl-dev libgd2-xpm-dev libncurses5-dev libcurl4-openssl-dev libssh2-1-dev libcairo2-dev'),
     '<p>Database interface libraries:</p>',
-    code('sudo apt-get install libmysqlclient-dev libsqlite3-dev libdb4.7-dev libmemcached-dev'),
+    code('sudo apt-get install libmysqlclient-dev libsqlite3-dev libmemcached-dev'),
     '',
     '<p>The apache2-util package installs the ab program, which can be used to benchmark SilkJS and other HTTP servers:</p>',
     code('sudo apt-get install apache2-utils'),
