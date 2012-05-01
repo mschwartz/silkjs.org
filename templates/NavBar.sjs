@@ -25,6 +25,7 @@ println([
         nav('/getting-started/', 'Getting Started'),
         nav('/http-server/', 'HTTP Server'),
         nav('/sync-vs-async/', 'Sync. vs. Async'),
+        nav('/demos/', 'Demos'),
         nav('/documentation/', 'Documentation'),
         nav('/contact-us/', 'Contact Us'),
 '        </ul>',
