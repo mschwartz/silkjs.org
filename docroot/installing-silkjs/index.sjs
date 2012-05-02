@@ -13,7 +13,7 @@ function url(s) {
 res.write([
     '<header class="hero-unit">',
     '  <h1>Installing SilkJS</h1>',
-    '  <p>SilkJS is currently available only via ' + res.data.github + ' currently.  Intallation is a breeze, though!</p>',
+    '  <p>SilkJS is currently available only via ' + res.data.github + '.  Intallation is a breeze, though!</p>',
     '  <a href="https://github.com/mschwartz/SilkJS/" class="btn btn-primary btn-large">View project on GitHub</a>',
     '  <a href="http://groups.google.com/group/SilkJS" class="btn btn-large">SilkJS Google Group</a>',
     '</header>',
