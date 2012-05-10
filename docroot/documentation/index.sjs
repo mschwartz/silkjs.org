@@ -9,6 +9,8 @@
 
 "use strict";
 
+/*global require, req, res */
+
 res.data.title = 'SilkJS - Documentation';
 
 var fs = require('fs');
@@ -55,9 +57,9 @@ fs.readDir(srcPath).each(function(fn) {
 cppDocs = sort(cppDocs);
 
 var jsDocs = {};
-fs.readDir(jsPath).each(function(fn) {
+fs.listRecursive(jsPath).each(function(fn) {
     if (fn.endsWith('.js')) {
-        jsDocs[fn] = parse(jsPath + fn);
+        jsDocs[fn] = parse(fn);
     }
 });
 jsDocs = sort(jsDocs);
