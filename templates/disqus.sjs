@@ -9,7 +9,7 @@ println([
     '<script type="text/javascript">',
     '    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */',
     'var disqus_shortname = "silkjs"; // required: replace example with your forum shortname',
-    'var disqus_identifier = "' + disqus_identifier + '"; // required: replace example with your forum shortname',
+    'var disqus_identifier = "' + disqus_identifier + '";',
     '',
     '   /* * * DON"T EDIT BELOW THIS LINE * * */',
     '   (function() {',

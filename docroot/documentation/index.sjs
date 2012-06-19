@@ -20,7 +20,7 @@ var empty = require('phpjs').empty;
 var pathInfo = req.path_info || '';
 
 //var docBase = '/Users/mschwartz/src/SilkJS'; // '/usr/share/silkjs';
-var docBase = '/usr/share/silkjs';
+var docBase = '/usr/local/silkjs';
 var srcPath = docBase + '/src/';
 var jsPath = docBase + '/modules/';
 
