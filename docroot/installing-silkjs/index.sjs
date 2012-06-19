@@ -37,6 +37,7 @@ res.write([
     '  you don\'t have a ~/src directory, you can create it from the comand line:</em><br/>',
     code('mkdir ~src; cd ~src') + '</p>',
     '',
+    '  <h2>OSX LION Quick Install</h2>',
     '  <p>There is an experimental quick install for OSX Lion.  Simply paste the following line into a terminal window:</p>',
     '  <code>curl http://silkjs.org/install-osx.sh | sh</code><br/><br/>',
     '',
