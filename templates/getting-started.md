@@ -47,7 +47,7 @@ var o = {
 	key1: 'value1',
 	key2: 'value2',
 	key3: [ 1,2,3],
-	key4: { a: '1\ b: 2, c: 3 }
+	key4: { a: '1' b: 2, c: 3 }
 };
 
 var print_r = builtin.print_r;
@@ -73,35 +73,6 @@ $ silkjs print_r.js
    [c] : (number) 3
 ```
 
-SilkJS extends the default JavaScript Object prototype to add a dump() method:
-```
-// dump.js
-var o = {
-	key1: 'value1',
-	key2: 'value2',
-	key3: [ 1,2,3],
-	key4: { a: '1', b: 2, c: 3 }
-};
-
-function main() {
-	o.dump();
-}
-```
-When we run it, we see:
-```
-$ silkjs dump.js
-(object) :
- [key1] : (string) value1
- [key2] : (string) value2
- [key3] : (array) :
-   [0] : (number) 1
-   [1] : (number) 2
-   [2] : (number) 3
- [key4] : (object) :
-   [a] : (string) 1
-   [b] : (number) 2
-   [c] : (number) 3
-```
 ### Shebang!
 Shebang is a Unix term for the first line of shell scripts.  These lines look something like #!/path/to/shell. SilkJS supports shebang, too.  For example, let's look at shebang.js:
 ```
@@ -325,5 +296,5 @@ SilkJS provides a number of modules and include-style libraries that you can use
 
 If you've installed SilkJS on a Linux server, you might try out the /usr/local/bin/systat.js program to see that it's quite possible to implement full-blown ncurses based console UI applications.
 
-Now that you've read about how SilkJS works, you might want to check out the HTTP server documentation.
+Now that you've read about how SilkJS works, you might want to check out the HTTP server documentation, the demos, and the online API documentation.
 
