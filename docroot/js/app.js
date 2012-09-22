@@ -5,7 +5,12 @@
         $('section [href^=#]').click(function (e) {
             e.preventDefault()
         })
-
+        $('.nav-collapse').on('show', function() {
+            $('#gitLink').hide();
+	});
+        $('.nav-collapse').on('hide', function() {
+            $('#gitLink').show();
+        });
         // make code pretty
         window.prettyPrint && prettyPrint()
 
