@@ -1,6 +1,17 @@
+@media (max-width : 979px) {
+    body {
+	    padding-top: 0px;
+    }
+    .navbar-fixed-top .navbar-inner {
+        padding: 0px;
+    }
+    .nav-collapse {
+        z-index: 999999;
+    }
+}
+
 body {
     position: relative;
-    padding-top: 90px;
     background-color: white;
     background-image: url(/img/grid-18px-masked.png);
     background-repeat: repeat-x;
