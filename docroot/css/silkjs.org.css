@@ -16,6 +16,9 @@ body {
     background-image: url(/img/grid-18px-masked.png);
     background-repeat: repeat-x;
     background-position: 0 40px;
+}
+
+body < .container {
     padding-top: 40px;
 }
 
