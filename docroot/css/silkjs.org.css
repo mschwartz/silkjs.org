@@ -18,6 +18,10 @@ body {
     background-position: 0 40px;
 }
 
+body < .container {
+    padding-top: 40px;
+}
+
 /* Footer
 -------------------------------------------------- */
 .footer {
