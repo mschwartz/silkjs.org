@@ -17,7 +17,7 @@ println([
 '        <span class="icon-bar"></span>',
 '        <span class="icon-bar"></span>',
 '      </a>',
-'      <a class="brand" href="/">SilkJS.org</a>',
+'      <a class="brand" href="/">SilkJS.net</a>',
 '      <div class="nav-collapse">',
 '        <ul class="nav">',
         nav('/', 'Overview'),

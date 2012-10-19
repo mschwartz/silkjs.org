@@ -1,1 +1,1 @@
-# This is the repository for the SilkJS.org WWW site.
+# This is the repository for the SilkJS.net WWW site.

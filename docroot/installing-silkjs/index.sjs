@@ -38,7 +38,7 @@ res.write([
     '',
     '  <h2>OSX LION Quick Install</h2>',
     '  <p>There is an experimental quick install for OSX Lion.  Simply paste the following line into a terminal window:</p>',
-    '  <code>curl http://silkjs.org/install-osx.sh | sh</code><br/><br/>',
+    '  <code>curl http://silkjs.net/install-osx.sh | sh</code><br/><br/>',
     '',
     '  <p>If you have feedback on the build process or these instructions, please email me at ' + res.data.contact + ' or post to the ' + res.data.googleGroup + '.</p>',
     '</div>',

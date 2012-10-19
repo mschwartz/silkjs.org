@@ -46,5 +46,5 @@ echo "You can run the SilkJS HTTP Server with the following command:"
 echo "$ httpd-silk.js yourapp.js"
 echo
 echo "For instructions on setting up a WWW site for httpd-silk.js, see"
-echo "http://silkjs.org/http-server/"
+echo "http://silkjs.net/http-server/"
 echo

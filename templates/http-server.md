@@ -7,7 +7,7 @@ Great care has been taken to assure the HTTP server is fast.  It was designed to
 
 Emphasis is placed on implementing as much of SilkJS and the HTTP server in JavaScript as possible. C++ is mainly used to implement a "thin layer of glue" between the JavaScript context and the operating system calls and libraries supported by the operating system.  In theory, users of SilkJS HTTP server can hack on the JavaScript code to bend it to their will, without needing expertise in any language but JavaScript.
 
-The silkjs.org WWW site should be served entirely by its own HTTP server.  This is not true of other HTTP server solutions.
+The silkjs.net WWW site should be served entirely by its own HTTP server.  This is not true of other HTTP server solutions.
 
 The server is to be highly extendable without hacking on the server's source code.
 
